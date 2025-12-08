@@ -37,6 +37,38 @@ box-shadow: 0 7px 0 #7f1d1d;
 transform: translateY(3px);
 box-shadow: 0 2px 0 #7f1d1d;
 }
+/* LINE誘導用の緑色ボタンを定義 */
+.cta-line-gradient {
+background: linear-gradient(180deg, #34d399 0%, #059669 100%); /* ライトグリーン〜濃いグリーン */
+color: #ffffff;
+box-shadow: 0 4px 0 #065f46; /* 濃いグリーンの影 */
+transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+border: 2px solid #a7f3d0; /* 目立つ薄いグリーンの縁取り */
+}
+.cta-line-gradient:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 0 #065f46;
+}
+.cta-line-gradient:active {
+transform: translateY(2px);
+box-shadow: 0 2px 0 #065f46;
+}
+/* お問い合わせ誘導用のネイビーボタンを定義 */
+.cta-navy-form {
+background: linear-gradient(180deg, #1f2937 0%, #0f172a 100%); /* ネイビー */
+color: #ffffff;
+box-shadow: 0 4px 0 #000000;
+transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+border: 2px solid #9ca3af; /* 薄いグレーの縁取り */
+}
+.cta-navy-form:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 0 #000000;
+}
+.cta-navy-form:active {
+transform: translateY(2px);
+box-shadow: 0 2px 0 #000000;
+}
 /* 元のCTAを削除または非推奨に */
 .cta-premium-gradient {
 background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
@@ -99,12 +131,22 @@ height: 100%;
 <p class="text-lg sm:text-xl font-extrabold text-white mb-6 bg-red-600 p-2 rounded-lg border-4 border-yellow-300 inline-block shadow-xl"><span class="text-yellow-300">先着1000名様限定！</span><br class="sm:hidden"> 専用AI最適化ソフト付属</p>
 <div class="my-6 relative">
 <img src="https://iili.io/fTHtChl.jpg" alt="SuperBrain1 イメージ" class="mx-auto w-full shadow-2xl rounded-xl border-double-thin-navy object-cover h-auto">
-<p class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-gray-900 text-sky-400 font-black text-m sm:text-l p-1 px-4 sm:px-8 rounded-full shadow-lg border-4 border-white">10分で <span class="text-xl sm:text-2xl">α波</span> を実現</p>
+<p class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-gray-900 text-sky-400 font-black text-s sm:text-l p-1 px-4 sm:px-8 rounded-full shadow-lg border-4 border-white">10分で <span class="text-xl sm:text-2xl">α波</span> を実現</p>
 </div>
 <div class="mt-12 mb-4">
 <a href="https://forms.gle/cXsVKLFeLBwfnrSv8" class="cta-red-gradient font-black py-4 px-6 rounded-xl shadow-2xl text-2xl sm:text-3xl w-full inline-block">【発達障害にも効果あり】<br><span class="text-yellow-300">限定特典</span> を今すぐ確認！</a>
 </div>
-<p class="text-xs sm:text-sm font-bold text-gray-600">在庫限り！30日間全額返金保証付き</p>
+<div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+<a href="https://line.me/ti/p/HL4WuSjHwA" target="_blank" class="cta-line-gradient font-bold py-3 px-4 rounded-xl shadow-lg text-base sm:text-lg inline-flex items-center justify-center">
+<svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.237 2.636 7.855 6.305 9.304-.15.215-.295.422-.435.618a.5.5 0 00.174.72l.487.325a.5.5 0 00.72-.174c.196-.28.384-.576.564-.882C10.66 21.688 12 22 12 22s4.84-2 7.72-3.8c2.4-1.5 3.28-3.4 3.28-6.2 0-5.523-4.477-10-10-10zM12.923 16.273h-.764c-1.393 0-2.486-.682-3.236-2.045C8.01 12.83 7.64 11.235 7.64 9.091V7.636h.764v1.455c0 1.95.295 3.205.886 4.09.431.652 1.05 1.008 1.995 1.008h.764v-1.182h-.764c-.75 0-1.136-.318-1.136-.955V8.182h1.909v.636h-1.14c.214.256.341.564.341.873 0 .423-.19.8-.573 1.127-.295.255-.705.418-1.182.418s-.886-.164-1.182-.418c-.382-.327-.573-.704-.573-1.127 0-.309.127-.617.341-.873h-1.14v-.636h1.909v-.545h.764V8.182h1.909v1.909c0 1.488-.705 2.545-2.114 3.149.972.584 1.705 1.48 1.909 2.727z"/></svg>
+LINEで詳しく聞く
+</a>
+<a href="https://forms.gle/cXsVKLFeLBwfnrSv8" target="_blank" class="cta-navy-form font-bold py-3 px-4 rounded-xl shadow-lg text-base sm:text-lg inline-flex items-center justify-center">
+<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-6 1a3 3 0 11-6 0v-1a3 3 0 116 0v1zM21 12v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3"></path></svg>
+いますぐお問い合わせ
+</a>
+</div>
+<p class="text-xs sm:text-sm font-bold text-gray-600 mt-4">在庫限り！30日間全額返金保証付き</p>
 </div>
 </header>
 <section class="py-12 bg-white">
@@ -212,6 +254,7 @@ height: 100%;
 </ul>
 <a href="https://forms.gle/cXsVKLFeLBwfnrSv8" class="cta-red-gradient font-black py-4 px-6 rounded-xl shadow-xl text-xl sm:text-xl mt-6 block w-full">✨ 限定オファーでSuperBrain1を手に入れる ✨</a>
 </div>
+</div>
 </section>
 <section class="py-12 bg-white">
 <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -229,9 +272,26 @@ height: 100%;
 </div>
 </div>
 </section>
-<footer class="bg-gray-900 py-6">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-<p class="text-xs text-gray-500">Copyright © 2024 SuperBrain1 All Rights Reserved.</p>
+<footer class="bg-gray-900 pt-10 pb-6 border-t-4 border-red-600">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="mb-8 p-6 bg-gray-800 rounded-xl shadow-xl border-4 border-yellow-300">
+<p class="text-xl sm:text-2xl font-black text-white mb-4">ご不明点、ご相談はこちらから</p>
+<div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+<a href="https://line.me/ti/p/HL4WuSjHwA" target="_blank" class="cta-line-gradient font-bold py-3 px-4 rounded-xl shadow-lg text-base sm:text-lg inline-flex items-center justify-center">
+<svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.237 2.636 7.855 6.305 9.304-.15.215-.295.422-.435.618a.5.5 0 00.174.72l.487.325a.5.5 0 00.72-.174c.196-.28.384-.576.564-.882C10.66 21.688 12 22 12 22s4.84-2 7.72-3.8c2.4-1.5 3.28-3.4 3.28-6.2 0-5.523-4.477-10-10-10zM12.923 16.273h-.764c-1.393 0-2.486-.682-3.236-2.045C8.01 12.83 7.64 11.235 7.64 9.091V7.636h.764v1.455c0 1.95.295 3.205.886 4.09.431.652 1.05 1.008 1.995 1.008h.764v-1.182h-.764c-.75 0-1.136-.318-1.136-.955V8.182h1.909v.636h-1.14c.214.256.341.564.341.873 0 .423-.19.8-.573 1.127-.295.255-.705.418-1.182.418s-.886-.164-1.182-.418c-.382-.327-.573-.704-.573-1.127 0-.309.127-.617.341-.873h-1.14v-.636h1.909v-.545h.764V8.182h1.909v1.909c0 1.488-.705 2.545-2.114 3.149.972.584 1.705 1.48 1.909 2.727z"/></svg>
+製品についてLINEで詳しく聞く
+</a>
+<a href="https://forms.gle/cXsVKLFeLBwfnrSv8" target="_blank" class="cta-navy-form font-bold py-3 px-4 rounded-xl shadow-lg text-base sm:text-lg inline-flex items-center justify-center">
+<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-6 1a3 3 0 11-6 0v-1a3 3 0 116 0v1zM21 12v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3"></path></svg>
+いますぐお問い合わせ (フォーム)
+</a>
+</div>
+</div>
+<p class="text-xs text-gray-500">
+<a href="#" class="text-gray-400 hover:text-white mx-2">プライバシーポリシー</a> | 
+<a href="#" class="text-gray-400 hover:text-white mx-2">特定商取引法に基づく表記</a>
+</p>
+<p class="text-xs text-gray-500 mt-4">Copyright © 2024 SuperBrain1 All Rights Reserved.</p>
 <p class="text-xs text-gray-600 mt-2">※個人の感想であり、効果・効能を示すものではありません。</p>
 </div>
 </footer>
