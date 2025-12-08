@@ -21,6 +21,23 @@ color: #f59e0b;
 .accent-blue {
 color: #1e40af;
 }
+/* 新しく分かりやすい赤系のCTAボタンを定義 */
+.cta-red-gradient {
+background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%); /* 赤〜濃い赤 */
+color: #ffffff;
+box-shadow: 0 5px 0 #7f1d1d; /* 濃い赤の影 */
+transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+border: 2px solid #fde047; /* 目立つ黄色の縁取り */
+}
+.cta-red-gradient:hover {
+transform: translateY(-2px);
+box-shadow: 0 7px 0 #7f1d1d;
+}
+.cta-red-gradient:active {
+transform: translateY(3px);
+box-shadow: 0 2px 0 #7f1d1d;
+}
+/* 元のCTAを削除または非推奨に */
 .cta-premium-gradient {
 background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
 color: #ffffff;
@@ -85,7 +102,7 @@ height: 100%;
 <p class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-gray-900 text-sky-400 font-black text-m sm:text-l p-1 px-4 sm:px-8 rounded-full shadow-lg border-4 border-white">10分で <span class="text-xl sm:text-2xl">α波</span> を実現</p>
 </div>
 <div class="mt-12 mb-4">
-<a href="#purchase" class="cta-navy-gradient font-black py-4 px-6 rounded-xl shadow-2xl text-2xl sm:text-3xl w-full inline-block">【迷わずクリック！】<br><span class="text-yellow-300">限定価格＆豪華特典</span> を今すぐ確認！</a>
+<a href="https://forms.gle/cXsVKLFeLBwfnrSv8" class="cta-red-gradient font-black py-4 px-6 rounded-xl shadow-2xl text-2xl sm:text-3xl w-full inline-block">【発達障害にも効果あり】<br><span class="text-yellow-300">限定特典</span> を今すぐ確認！</a>
 </div>
 <p class="text-xs sm:text-sm font-bold text-gray-600">在庫限り！30日間全額返金保証付き</p>
 </div>
@@ -148,14 +165,14 @@ height: 100%;
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 <h2 class="text-2xl sm:text-3xl font-extrabold primary-navy mb-10 text-center border-b-4 border-accent-gold inline-block pb-1">科学に基づく脳波誘導メカニズム</h2>
 <div class="text-center space-y-6">
-<p class="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">SuperBrain1は、数十年にもわたる神経科学の研究に基づいています。音響技術「バイノーラルビート」が、あなたの意識に介入することなく、脳を特定の周波数にシンクロさせます。これは、瞑想や修行を何年も続けた者が到達する境地を、誰でも、たった10分で体験できるようにする技術です。</p>
+<p class="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">SuperBrain1は、数十年にもわたる神経科学の研究に基づいています。音響技術「バイノーラル・ビート」が、あなたの脳を特定の周波数にシンクロナイズ。これは、瞑想や修行を何年も続けた者が到達する境地を、誰でもたった10分で体験できるようにする技術です。</p>
 <div class="rounded-xl shadow-2xl overflow-hidden mb-8">
 <img width="1024" height="769" alt="女子高生がSuperBrain1を使用しているイメージ" src="https://github.com/user-attachments/assets/014216b2-b346-4aff-8e06-c820a70356e5" class="w-full h-auto">
 </div>
-<p class="text-xl sm:text-2xl font-black primary-navy border-l-4 border-accent-gold pl-4 pt-4 max-w-3xl mx-auto text-left">脳は、聴覚的な錯覚を現実の脳波に変える。<br>これが、SuperBrain1のコアバリューです。</p>
+<p class="text-l sm:text-xl font-black primary-navy border-l-4 border-accent-gold pl-4 pt-4 max-w-2xl mx-auto text-left">周波数を制御し、脳-波をハッキングする。<br>これがSuperBrain1のコアバリューです。</p>
 </div>
 <div class="mt-10 p-4 sm:p-6 bg-white rounded-xl shadow-2xl border-4 border-yellow-400 text-center">
-<p class="text-2xl sm:text-4xl font-extrabold text-gray-900">販売実績 <span class="text-5xl sm:text-6xl accent-blue">2500</span> 台突破！</p>
+<p class="text-2xl sm:text-4xl font-extrabold text-gray-900">販売実績 <span class="text-5xl sm:text-6xl accent-blue">2500</span> 台突破!!</p>
 <p class="text-base sm:text-xl font-bold mt-2 text-gray-700">難関大合格、TOEIC高得点、ビジネス成功者が続出中！</p>
 </div>
 </div>
@@ -171,13 +188,13 @@ height: 100%;
 
 </div>
 <div class="mt-10">
-<a href="#purchase" class="cta-navy-gradient font-black py-3 px-6 rounded-xl shadow-2xl text-xl sm:text-2xl w-full inline-block">いますぐ【α波体験】を始める！</a>
+<a href="https://forms.gle/cXsVKLFeLBwfnrSv8" class="cta-red-gradient font-black py-3 px-6 rounded-xl shadow-2xl text-xl sm:text-2xl w-full inline-block">いますぐ【α波体験】を始める！</a>
 </div>
 </div>
 </section>
 <section id="purchase" class="py-12 bg-gray-100 border-t border-gray-200">
 <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<h2 class="text-2xl sm:text-3xl font-black primary-navy mb-6 p-2 border-b-4 border-red-500 inline-block">【人生を好転させる】最後のチャンスです。</h2>
+<h2 class="text-2xl sm:text-3xl font-black primary-navy mb-6 p-2 border-b-4 border-red-500 inline-block">【誰もが才能に恵まれるために】<br>特別オファー</h2>
 <div class="bg-white p-6 md:p-8 rounded-3xl shadow-2xl border-4 border-gray-900">
 <p class="text-gray-500 text-base font-bold mb-2 line-through">通常価格: 99,800円 (税込)</p>
 <div class="text-center bg-white p-4 rounded-xl mb-6 shadow-inner border-4 border-accent-gold">
@@ -185,28 +202,29 @@ height: 100%;
 <p class="text-4xl md:text-6xl font-extrabold primary-navy leading-none"><span class="text-2xl align-top">税込</span>79,800<span class="text-2xl">円</span></p>
 <p class="text-lg font-bold text-gray-700">（<span class="text-3xl primary-navy">20,000円</span>OFF & 送料無料！）</p>
 </div>
-<p class="text-l font-black primary-navy mb-4">【セット内容】すぐに使用可能なスタートキット</p>
+<p class="text-m font-black primary-navy mb-4">【セット内容】到着後すぐに使用可能なスタートキット</p>
 <ul class="text-left text-base font-bold text-gray-800 bg-gray-50 p-4 rounded-xl shadow-inner border-2 border-gray-300 mx-auto space-y-2">
 <li><span class="accent-gold mr-2 text-xl">★</span> Bluetoothイヤホン</li>
 <li><span class="accent-gold mr-2 text-xl">★</span> ワイヤレス接続用トランスミッター</li>
-<li><span class="accent-gold mr-2 text-xl">★</span> AI最適化ソフト(スマートフォンで利用可能)</li>
-<li><span class="accent-gold mr-2 text-xl">★</span> 脳波別活用ガイドブック（PDF）</li>
+<li><span class="accent-gold mr-2 text-xl">★</span> AI最適化ソフト(スマホで利用可能)</li>
+<li><span class="accent-gold mr-2 text-xl">★</span> 脳波別活用ガイドブック</li>
 <li><span class="accent-gold mr-2 text-xl">★</span> アフターサポート</li>
 </ul>
-<a href="#" class="cta-premium-gradient font-black py-4 px-6 rounded-xl shadow-xl text-xl sm:text-xl mt-6 block w-full">✨ 限定オファーでSuperBrain1を手に入れる ✨</a>
+<a href="https://forms.gle/cXsVKLFeLBwfnrSv8" class="cta-red-gradient font-black py-4 px-6 rounded-xl shadow-xl text-xl sm:text-xl mt-6 block w-full">✨ 限定オファーでSuperBrain1を手に入れる ✨</a>
+</div>
 </section>
 <section class="py-12 bg-white">
 <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
 <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-8 text-center border-b-4 border-accent-blue inline-block pb-1">受験生からも感動の声が続々！</h2>
 <div class="space-y-4">
-    <img width="1152" height="896" alt="脳波測定データ" src="https://github.com/user-attachments/assets/499fb39e-1db8-4dc7-a15b-1f0b1c80d51b" class="w-full h-auto">
+<img width="1152" height="896" alt="脳波測定データ" src="https://github.com/user-attachments/assets/499fb39e-1db8-4dc7-a15b-1f0b1c80d51b" class="w-full h-auto">
 <div class="p-4 rounded-xl shadow-lg border-l-4 border-accent-blue bg-gray-50">
-<p class="font-bold text-lg accent-blue mb-1">京大合格 A.T様（受験生）</p>
-<p class="text-gray-700 text-sm">「信じられないほど集中力が持続しました。長時間勉強しても苦にならず、合格はSuperBrain1のおかげです。」</p>
+<p class="font-bold text-lg accent-blue mb-1">京都大学合格 A.T様（受験生）</p>
+<p class="text-gray-700 text-sm">「受験時代、スピーカーを使って小さい音で流して使用していました。数学のチャート式インプット、英文速読に没頭でき、気づけば夜に。信じられないほど集中力が持続したのを覚えています。合格はスーパーブレインのおかげです。」</p>
 </div>
 <div class="p-4 rounded-xl shadow-lg border-l-4 border-accent-blue bg-gray-50">
-<p class="font-bold text-lg accent-blue mb-1">K.S様（起業家）</p>
-<p class="text-gray-700 text-sm">「θ波モードを使うと、まるで別人のようにアイデアが湧いてきます。ビジネスの成功に直結しました。」</p>
+<p class="font-bold text-lg accent-blue mb-1">一橋大学合格K.S様（浪人生）</p>
+<p class="text-gray-700 text-sm">「日中の勉強時間はα波で超集中モード、就寝時はδ波で熟眠でき、生活習慣が劇的に向上したことで勉強の効率も爆上がりしました。」</p>
 </div>
 </div>
 </div>
