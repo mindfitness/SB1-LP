@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VFZ318GY2"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
 
-  gtag('config', 'G-3VFZ318GY2');
+ gtag('config', 'G-3VFZ318GY2');
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -129,35 +128,205 @@ height: 100%;
 }
 /* モーダル背景 */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: none; /* 初期状態では非表示 */
-    z-index: 50; /* Tailwind の z-50 */
-    overflow-y: auto; /* コンテンツが長い場合にスクロール可能に */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; /* 初期状態では非表示 */
+  z-index: 50; /* Tailwind の z-50 */
+  overflow-y: auto; /* コンテンツが長い場合にスクロール可能に */
 }
 /* モーダルコンテンツ */
 .modal-content {
-    background: white;
-    margin: 40px auto; /* 上下にスペースを空ける */
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 90%;
-    width: 700px;
-    position: relative;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  background: white;
+  margin: 40px auto; /* 上下にスペースを空ける */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  width: 700px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 .modal-close-button {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    line-height: 1;
-    cursor: pointer;
-    color: #4b5563;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+/* ==================================== */
+/* 組み込むテーブル用のカスタムCSS (モバイル対応含む) */
+/* ==================================== */
+
+/* body padding は main body にあるためここでは省略 */
+
+/* テーブル全体 */
+.brainwave-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px auto;
+    font-family: 'Noto Sans JP', 'Inter', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.brainwave-caption {
+    font-size: 1.6em;
+    margin-bottom: 14px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.brainwave-table th, .brainwave-table td {
+    border: 1px solid #e5e7eb;
+    padding: 14px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.brainwave-table thead th {
+    background-color: #1e40af;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.brainwave-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.brainwave-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.brainwave-table tbody tr:hover {
+    background-color: #eef2ff;
+}
+
+/* モード周波数のセルを強調 */
+.brainwave-table .mode-freq {
+    background-color: #e0f2fe;
+    font-weight: bold;
+    color: #0369a1;
+}
+
+/* 脳波ごとの色分け */
+.brainwave-table .beta {
+    background-color: #fee2e2;
+    font-weight: bold;
+    color: #991b1b;
+}
+
+.brainwave-table .alpha {
+    background-color: #ecfeff;
+    font-weight: bold;
+    color: #155e75;
+}
+
+.brainwave-table .theta {
+    background-color: #fef9c3;
+    font-weight: bold;
+    color: #854d0e;
+}
+
+.brainwave-table .delta {
+    background-color: #ede9fe;
+    font-weight: bold;
+    color: #5b21b6;
+}
+
+/* モバイル表示用のCSS (max-width: 600px) */
+@media screen and (max-width: 600px) {
+    .brainwave-table {
+        border: 0;
+    }
+
+    /* テーブルヘッダー (thead) を非表示にし、trを「カード」として表示 */
+    .brainwave-table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .brainwave-table tr {
+        display: block; /* 各行をブロック要素（カード）に変換 */
+        margin-bottom: 16px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        background-color: #ffffff !important; /* ホバー色をリセット */
+    }
+
+    .brainwave-table tr:hover {
+         background-color: #f3f4f6 !important;
+    }
+
+    /* テーブルデータセル (td) のリフロー設定 */
+    .brainwave-table td {
+        display: block; /* 各セルを縦に積み重ねる */
+        text-align: right !important;
+        border: none;
+        border-bottom: 1px solid #e5e7eb;
+        position: relative;
+        padding-left: 50%; /* ラベル表示用のスペースを確保 */
+        background-color: transparent !important; /* 背景色リセット */
+        color: inherit !important;
+        font-weight: normal !important;
+    }
+
+    .brainwave-table td:last-child {
+        border-bottom: 0;
+    }
+
+    /* data-label 属性を使ってヘッダー名をセルの前に表示 */
+    .brainwave-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        width: calc(50% - 24px);
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+        color: #4b5563;
+    }
+
+    /* 脳波の種類セルを「カード」のタイトルとして強調 */
+    .brainwave-table .beta[data-label="脳波の種類"],
+    .brainwave-table .alpha[data-label="脳波の種類"],
+    .brainwave-table .theta[data-label="脳波の種類"],
+    .brainwave-table .delta[data-label="脳波の種類"] {
+        text-align: left !important;
+        font-size: 1.1em;
+        font-weight: bold !important;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 14px 12px;
+        position: static; /* ラベル表示を解除 */
+    }
+    .brainwave-table .beta[data-label="脳波の種類"]::before,
+    .brainwave-table .alpha[data-label="脳波の種類"]::before,
+    .brainwave-table .theta[data-label="脳波の種類"]::before,
+    .brainwave-table .delta[data-label="脳波の種類"]::before {
+        content: none; /* ラベルを非表示 */
+    }
+
+    /* オリジナルの色を「脳波の種類」の背景色として適用 */
+    .brainwave-table .beta[data-label="脳波の種類"] { background-color: #fee2e2; color: #991b1b; }
+    .brainwave-table .alpha[data-label="脳波の種類"] { background-color: #ecfeff; color: #155e75; }
+    .brainwave-table .theta[data-label="脳波の種類"] { background-color: #fef9c3; color: #854d0e; }
+    .brainwave-table .delta[data-label="脳波の種類"] { background-color: #ede9fe; color: #5b21b6; }
 }
 </style>
 </head>
@@ -316,6 +485,72 @@ LINEで詳しく聞く
 <p class="text-xs text-gray-600 mt-6 text-center">※個人の感想であり、効果を保証するものではありません。</p>
 </div>
 </section>
+
+<section id="brainwaves-table" class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-black text-gray-900 mb-8 text-center border-b-4 border-accent-gold inline-block pb-1">周波数ごとの機能詳細</h2>
+        
+        <table class="brainwave-table">
+
+            <thead>
+                <tr>
+                    <th>脳波の種類</th>
+                    <th>周波数帯</th>
+                    <th>モード周波数</th>
+                    <th>意識（心）の状態</th>
+                    <th>主な利用目的</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="beta" data-label="脳波の種類">β波（ベータ）</td>
+                    <td data-label="周波数帯">26〜14Hz</td>
+                    <td class="mode-freq" data-label="モード周波数">―</td>
+                    <td data-label="意識（心）の状態">緊張・不安・イライラ〜ストレス状態</td>
+                    <td data-label="主な利用目的">―</td>
+                </tr>
+        
+                <tr>
+                    <td class="alpha" data-label="脳波の種類">α波（アルファ）</td>
+                    <td data-label="周波数帯">13〜8Hz</td>
+                    <td class="mode-freq" data-label="モード周波数">ファーストα：13〜11Hz</td>
+                    <td data-label="意識（心）の状態">緊張 ＆ 集中状態</td>
+                    <td data-label="主な利用目的">―</td>
+                </tr>
+                <tr>
+                    <td class="alpha" data-label="脳波の種類">α波（アルファ）</td>
+                    <td data-label="周波数帯">13〜8Hz</td>
+                    <td class="mode-freq" data-label="モード周波数">ミッドα：モード4（9Hz）</td>
+                    <td data-label="意識（心）の状態">リラックス ＆ 集中</td>
+                    <td data-label="主な利用目的">受験勉強・資格取得・仕事・スポーツトレーニング</td>
+                </tr>
+                <tr>
+                    <td class="alpha" data-label="脳波の種類">α波（アルファ）</td>
+                    <td data-label="周波数帯">13〜8Hz</td>
+                    <td class="mode-freq" data-label="モード周波数">スローα：モード3（7Hz）</td>
+                    <td data-label="意識（心）の状態">やや眠気・意識低下</td>
+                    <td data-label="主な利用目的">ストレス解消・免疫力アップ</td>
+                </tr>
+        
+                <tr>
+                    <td class="theta" data-label="脳波の種類">θ波（シータ）</td>
+                    <td data-label="周波数帯">7〜4Hz</td>
+                    <td class="mode-freq" data-label="モード周波数">モード2</td>
+                    <td data-label="意識（心）の状態">浅い眠り、超リラックス瞑想、精神的安定</td>
+                    <td data-label="主な利用目的">学習・記憶、イメージ力、直感・ヒラメキ、瞑想</td>
+                </tr>
+        
+                <tr>
+                    <td class="delta" data-label="脳波の種類">δ波（デルタ）</td>
+                    <td data-label="周波数帯">3〜0.5Hz以下</td>
+                    <td class="mode-freq" data-label="モード周波数">モード1</td>
+                    <td data-label="意識（心）の状態">深い睡眠、熟睡、成長ホルモン分泌</td>
+                    <td data-label="主な利用目的">―</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 <footer class="bg-gray-900 pt-10 pb-6 border-t-4 border-red-600">
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 <div class="mb-8 p-6 bg-gray-800 rounded-xl shadow-xl border-4 border-yellow-300">
@@ -342,51 +577,51 @@ LINEで詳しく聞く
 </footer>
 
 <div id="privacy-modal" class="modal-overlay">
-    <div class="modal-content">
-        <span class="modal-close-button" onclick="closeModal('privacy-modal')">&times;</span>
-        <h3 class="text-xl font-bold mb-4 border-b pb-2">プライバシーポリシー</h3>
-        <p class="text-sm text-gray-700 space-y-3">
-            <p class="font-bold mt-3">1. 個人情報の取得</p>
-            <p>当社は、お客様からのお問い合わせ、ご購入時、およびサービス利用時に氏名、メールアドレス、住所などの個人情報を取得することがあります。</p>
-            <p class="font-bold mt-3">2. 利用目的</p>
-            <p>取得した個人情報は、以下の目的のためにのみ利用します。
-                <ul class="list-disc list-inside ml-4 text-sm">
-                    <li>商品の発送、関連するご連絡</li>
-                    <li>お問い合わせへの対応</li>
-                    <li>サービスに関する情報提供</li>
-                </ul>
-            </p>
-            <p class="font-bold mt-3">3. 第三者への開示・提供</p>
-            <p>法令に基づく場合などを除き、お客様の同意なく第三者に個人情報を提供することはありません。</p>
-            <p class="font-bold mt-3">4. 安全管理</p>
-            <p>当社は、個人情報の漏洩、滅失、毀損を防ぐため、必要かつ適切な安全管理措置を講じます。</p>
-        </p>
-    </div>
+  <div class="modal-content">
+    <span class="modal-close-button" onclick="closeModal('privacy-modal')">&times;</span>
+    <h3 class="text-xl font-bold mb-4 border-b pb-2">プライバシーポリシー</h3>
+    <p class="text-sm text-gray-700 space-y-3">
+      <p class="font-bold mt-3">1. 個人情報の取得</p>
+      <p>当社は、お客様からのお問い合わせ、ご購入時、およびサービス利用時に氏名、メールアドレス、住所などの個人情報を取得することがあります。</p>
+      <p class="font-bold mt-3">2. 利用目的</p>
+      <p>取得した個人情報は、以下の目的のためにのみ利用します。
+        <ul class="list-disc list-inside ml-4 text-sm">
+          <li>商品の発送、関連するご連絡</li>
+          <li>お問い合わせへの対応</li>
+          <li>サービスに関する情報提供</li>
+        </ul>
+      </p>
+      <p class="font-bold mt-3">3. 第三者への開示・提供</p>
+      <p>法令に基づく場合などを除き、お客様の同意なく第三者に個人情報を提供することはありません。</p>
+      <p class="font-bold mt-3">4. 安全管理</p>
+      <p>当社は、個人情報の漏洩、滅失、毀損を防ぐため、必要かつ適切な安全管理措置を講じます。</p>
+    </p>
+  </div>
 </div>
 
 <script>
-    // モーダルを開く関数
-    function openModal(modalId) {
-        document.getElementById(modalId).style.display = 'flex';
-    }
+  // モーダルを開く関数
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+  }
 
-    // モーダルを閉じる関数
-    function closeModal(modalId) {
-        document.getElementById(modalId).style.display = 'none';
-    }
+  // モーダルを閉じる関数
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
 
-    // モーダルの外側をクリックしたら閉じるイベントリスナー
-    window.onload = function() {
-        // プライバシーポリシーのモーダルのみを処理
-        const privacyOverlay = document.getElementById('privacy-modal');
-        if (privacyOverlay) {
-            privacyOverlay.addEventListener('click', function(e) {
-                if (e.target === privacyOverlay) {
-                    closeModal(privacyOverlay.id);
-                }
-            });
+  // モーダルの外側をクリックしたら閉じるイベントリスナー
+  window.onload = function() {
+    // プライバシーポリシーのモーダルのみを処理
+    const privacyOverlay = document.getElementById('privacy-modal');
+    if (privacyOverlay) {
+      privacyOverlay.addEventListener('click', function(e) {
+        if (e.target === privacyOverlay) {
+          closeModal(privacyOverlay.id);
         }
+      });
     }
+  }
 </script>
 </body>
 </html>
